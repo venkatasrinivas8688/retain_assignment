@@ -1,3 +1,33 @@
+Major Issues:
+
+1)SQL Injection Risk
+ex : cursor.execute(f"SELECT * FROM users WHERE id = '{user_id}'")
+
+2)No Input Validation 
+ex : data = json.loads(request.get_data())
+fix:check if name, email, or password are valid.
+
+3)Plaintext Passwords
+example:"password123"
+fix:Use bcrypt to hash passwords before saving.
+
+4) Improper Use of HTTP Status Codes
+issue:Always returns HTTP 200 with plain string, even for errors.
+fix:user proper HTTP status codes
+
+5) Unsafe JSON Parsing(this error i have seen from chat gpt)
+issue:data = json.loads(request.get_data())
+fix:data = request.get_json()
+
+6)Hardcoded DB Connection(seen from chat-gpt)
+issue:conn = sqlite3.connect('users.db', check_same_thread=False)
+fix:user seperate database connection 
+
+7)No Error Handling
+Issue: If a query fails, it crashes the app.
+Fix: Use try/except blocks and return meaningful error messages.
+
+-----------------------------------------------------------------------------------------------
 # Code Refactoring Challenge
 
 ## Overview
