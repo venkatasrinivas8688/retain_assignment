@@ -1,0 +1,29 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0",
+    "shortid": "^2.2.17",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1",
+    "supertest": "^7.1.4"
+  }
+}
